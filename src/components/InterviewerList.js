@@ -4,7 +4,7 @@ import InterviewerListItem from './InterviewerListItem';
 
 
 export default function InterviewerList(props) {
-  
+
   return (
     <section className="interviewers">
       <h4 className="interviewers__header text--light">Interviewer</h4>
@@ -12,16 +12,13 @@ export default function InterviewerList(props) {
       {props.interviewers.map((p) => (
         <InterviewerListItem
           key={p.id}
-          id={p.id}
           name={p.name}
           avatar={p.avatar}
           selected={p.id === props.interviewer}
-          setInterviewer={props.setInterviewer}
+          setInterviewer={()  => props.setInterviewer(p.id)}
 
         />
       ))}
-
-
 
       </ul>
     </section>
