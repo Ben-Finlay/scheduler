@@ -4,6 +4,7 @@ import InterviewerListItem from './InterviewerListItem';
 
 
 export default function InterviewerList(props) {
+
   const { value, onChange, interviewers } = props;
   return (
     <section className="interviewers">
@@ -16,7 +17,6 @@ export default function InterviewerList(props) {
           avatar={p.avatar}
           selected={p.id === value}
           setInterviewer={() => onChange(p.id)}
-
         />
       ))}
 
