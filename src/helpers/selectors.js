@@ -17,8 +17,30 @@
 //Much better.
 export function getAppointmentsForDay(state, day) {
   const foundDay = state.days.find(element => element.name === day);
-    if(!foundDay) {
-      return [];
-    }
-    return foundDay.appointments.map(id => state.appointments[id])
+  if (!foundDay) {
+    return [];
+  }
+
+  return foundDay.appointments.map(id => state.appointments[id])
+};
+
+export function getInterviewersForDay(state, day) {
+  const foundInt = state.days.find(e => e.name === day);
+  if (!foundInt) {
+    return [];
+  }
+  
+  return foundInt.interviewers.map(id => state.interviewers[id])
+};
+
+
+export function getInterview(state, interview) {
+  const output = {};
+  if (interview) {
+    output["student"] = interview.student;
+    output["interviewer"] = state.interviewers[interview.interviewer];
+  } else {
+    return null;
+  }
+  return output;
 };
