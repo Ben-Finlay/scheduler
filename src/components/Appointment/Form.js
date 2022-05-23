@@ -8,6 +8,8 @@ import 'components/InterviewerList.scss';
 
 export default function Form(props) {
 
+ console.log("Student Obj:", props.student)
+
   const [student, setStudent] = useState(props.student || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
 
@@ -20,6 +22,8 @@ export default function Form(props) {
     reset();
     props.onCancel();
   }
+
+  
 
   return (
     <main className="appointment__card appointment__card--create">
