@@ -10,7 +10,4 @@ describe("Application Component", () => {
   it("renders without crashing", () => {
     render(<Application />);
   });
-
-
-})
-
+});

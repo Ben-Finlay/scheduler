@@ -3,23 +3,24 @@ import "components/Application.scss";
 
 import DayList from "./DayList";
 import Appointment from "components/Appointment";
-import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
+import {
+  getAppointmentsForDay,
+  getInterview,
+  getInterviewersForDay,
+} from "helpers/selectors";
 import useApplicationData from "hooks/useApplicationData";
-
 
 //Application Component
 export default function Application(props) {
-  const {
-    state,
-    setDay,
-    bookInterview,
-    cancelInterview
-  } = useApplicationData();
+  const { state, setDay, bookInterview, cancelInterview } =
+    useApplicationData();
 
+  //Get Interviewers for Selected Day
   const interviewers = getInterviewersForDay(state, state.day);
 
+  //Get Appointments for Selected Day
   const appointments = getAppointmentsForDay(state, state.day).map(
-    appointment => {
+    (appointment) => {
       return (
         <Appointment
           key={appointment.id}
@@ -33,6 +34,7 @@ export default function Application(props) {
     }
   );
 
+  //HTML
   return (
     <main className="layout">
       <section className="sidebar">
