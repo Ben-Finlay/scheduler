@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "components/Button";
 
+
+//Handles the Confirm Card
 export default function Confirm(props) {
   const { message, onConfirm, onCancel } = props;
 

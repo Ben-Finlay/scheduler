@@ -3,7 +3,7 @@ import "components/InterviewerList.scss";
 import InterviewerListItem from "./InterviewerListItem";
 import PropTypes from "prop-types";
 
-//Shows the Interviewer portraits and names if selected in the DayListItem
+//Gets the Necessary Information to Pass down to the Interviewer List
 export default function InterviewerList(props) {
   const { value, onChange, interviewers } = props;
 

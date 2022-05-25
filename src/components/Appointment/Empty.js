@@ -1,5 +1,7 @@
 import React from "react";
 
+
+//Handles an Empty Card
 export default function Empty(props) {
   const { onAdd } = props;
 

@@ -1,5 +1,7 @@
 import React from "react";
 
+
+//Handles an Error Card
 export default function Error(props) {
   const { message, onClose } = props;
 

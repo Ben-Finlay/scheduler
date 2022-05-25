@@ -2,6 +2,7 @@ import React from "react";
 import "components/InterviewerListItem.scss";
 import classNames from "classnames";
 
+//Displays the Individual Interviewers and whether they are selected.
 export default function InterviewerListItem(props) {
   const { avatar, name, selected, setInterviewer } = props;
   let interviewClass = classNames("interviewers__item", {

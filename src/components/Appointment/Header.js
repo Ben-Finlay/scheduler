@@ -1,5 +1,7 @@
 import React from "react";
 
+
+//Header which displays the time.
 export default function Header(props) {
   const { time } = props;
 

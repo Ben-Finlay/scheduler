@@ -12,6 +12,7 @@ const formatSpots = (spots) => {
   }
 };
 
+//Displays an Individual Interview Block
 export default function DayListItem(props) {
   let dayClass = classNames("day-list__item", {
     "day-list__item--selected": props.selected,
