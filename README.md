@@ -33,16 +33,3 @@ For information about setting up a database server.
 ```sh
 npm start
 ```
-
-## Running Jest Test Framework
-
-```sh
-npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
-```
-
